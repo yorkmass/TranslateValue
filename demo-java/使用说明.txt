@@ -1,0 +1,9 @@
+注意：source.txt为要转换的文件名，需要放在src目录下面,生成的文件也在src目录下
+使用命令行运行
+1、在cmd窗口执行cd命令到src目录下
+如：C:\windows\system32>cd C:\Users\Administrator\Desktop\translate\demo-java\src
+2、在src目录下执行：javac -encoding UTF-8 com/company/tools/Translate.java
+如：C:\Users\Administrator\Desktop\translate\demo-java\src>javac -encoding UTF-8 com/company/tools/Translate.java
+3、再执行：java com.company.tools.Translate
+如：C:\Users\Administrator\Desktop\translate\demo-java\src>java com.company.tools.Translate
+最后等待cmd显示执行成功即可！
