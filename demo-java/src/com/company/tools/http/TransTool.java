@@ -25,7 +25,9 @@ public class TransTool {
             if(!s.split(":")[0].equals(s)){
 
                 if(!(s.split(":")[1].trim().equals("{")||s.split(":")[1].trim().equals("["))){
-                    s=s.split(":")[0]+":"+UnicodeConverteUtil.unicode2String(api.getTransResult(s.split(":")[1].trim(),fromLangue,toLangue));
+                    String res=UnicodeConverteUtil.unicode2String(api.getTransResult(s.split(":")[1].trim(),fromLangue,toLangue));
+                    res=res.replaceAll("«","").replaceAll("»","").replaceAll("\\\\","");
+                    s=s.split(":")[0]+":"+res;
                 }
             }
             bw.write(s+"\t\n");
